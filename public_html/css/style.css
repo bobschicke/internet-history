@@ -103,7 +103,7 @@ main img {
 }
 
 section h2 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-size: 1.8vw;
 }
 
@@ -135,7 +135,7 @@ footer{
 }
 
 footer>span {
-    font-size: 0.8em;
+
     font-style: italic;
     width: 33%;
     margin-left: auto;
