@@ -5,38 +5,63 @@
     <title>zpage</title>
     <meta name="description" content="This is an example of a meta description.
     This will often show up in search results.">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- COMMENT IN HTML -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
 
     <style>
-        header, aside, main, footer, menu{
-            /* border: 1px solid black; */
-            padding: 5px;
-        }
-
         header {
             width: 67%;
             float: left;
             text-align: center;
+            font-size: 1.5vw;
+            position: fixed;
+            margin-top: 0;
+        }
+        header h1 {
+            color: ivory;
         }
 
         menu {
             float: right;
-            margin-top: auto;
+            margin-top: 0;
             width: 33%;
-
+            font-size: 1.3vw;
+            margin-left: 66%;
+            /* fixed locks the position relative to the window, so scrolling has no effect.
+            For some reason this moves the horizontal position all the way to the left??? */
+            position: fixed;
         }
         menu li {
             display: inline-block;
-            margin-top: 30px;
-            padding: 10px;
-            }
+            margin-top: 2.5vw;
+            padding: .3vw;
+
+        }
+        menu a {
+            color: ivory;
+        }
+
+        menu li:hover {
+            background: gray;
+        }
 
         header, menu {
             box-sizing: border-box;
-            height: 100px;
+            height: 7vw;
+            margin-bottom: 0;
+            background-color: blue;
+            padding: .2vw;
+        }
+
+        #heading {
+            box-sizing: border-box;
+            height: 6vw;
+            width: 100%;
+            float: left;
+            text-align: center;
+            background-color: blanchedalmond;
+            font-size: 1.7vw;
+            margin-top: 7vw;
         }
 
         #wrapper{
@@ -48,18 +73,12 @@
             background-color: aliceblue;
         }
 
-        aside{
-            width:16%;
-            box-sizing: border-box;
+        main{
+            width: 100%;
             float: left;
-            display: inline-block;
-            /* height: 300px; */
-            padding-bottom: 20px;
-        }
-        aside img {
-            margin: 0;
-
-            width: 80%;
+            box-sizing: border-box;
+            margin-top: 7vw;
+            padding: .2vw;
         }
 
         main img {
@@ -72,14 +91,34 @@
             margin-bottom: 10px;
         }
 
-        main{
-            width: 100%;
-            float: left;
+        aside{
+            width:16%;
             box-sizing: border-box;
+
+            display: inline-block;
+            /* height: 300px; */
+            margin-top: .2vw;
+            /* margin-left: 1vw;
+            margin-right: 1vw; */
+            padding: .2vw;
+            margin-left: .1vw;
+            margin-right: auto;
+            vertical-align: top;
+
+        }
+
+        aside img {
+            margin: 0;
+
+            width: 100%;
         }
 
         footer{
             Clear: both;
+            height: 2vw;
+            background-color: lightgray;
+            font-size: 1.3vw;
+            margin-top: 2vw;
         }
 
         footer>span {
@@ -92,9 +131,6 @@
             display: inline-block;
         }
 
-        h1 {
-
-        }
         h2 {
             margin: 0;
         }
@@ -119,22 +155,24 @@
 
 </head>
 <body>
+    <header>
+        <h1>The History of the Internet</h1>
+    </header>
+    <menu>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Z-Page</a></li>
+        <li><a href="fpage.html">F-Page</a></li>
+    </menu>
+    <div id ="heading">
+        <h2>Explore The Interesting and Exciting History Of The Internet</h2>
+    </div>
     <div id="wrapper">
-        <header>
-            <h1>The History of the Internet</h1>
-        </header>
-        <menu>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="index.html">Z-Page</a></li>
-            <li><a href="fpage.html">F-Page</a></li>
-        </menu>
         <main>
             <section id="section1">
-                <h2>Explore The Interesting and Exciting History Of The Internet</h2>
                 <img src="images/collage.JPG" alt="This is a sample picture"/>
                 <div>
-
+                    Say Something
                 </div>
             </section>
         </main>
@@ -181,14 +219,14 @@
             </div>
         </aside>
         <footer>
-            <span>
-                Copyright
+            <span id="Copyright">
+                <a href="https://www.linkedin.com/in/robert-schicke-b42a3670/">Bob Schicke&#169;</a>
             </span>
             <span>
-                Wiki Link
+                <a href="https://en.wikipedia.org/wiki/History_of_the_Internet">Wiki Link</a>
             </span>
             <span>
-                Article Download link
+                <a href="https://github.com/bobschicke/CSS_Test">Article Download link</a>
             </span>
 
         </footer>
