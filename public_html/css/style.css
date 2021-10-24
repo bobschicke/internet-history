@@ -96,7 +96,7 @@ main{
 
 main img {
     box-sizing: border-box;
-    width: 20%;
+    width: 30%;
 
     float: left;
     padding: 5px;
@@ -118,13 +118,14 @@ section {
     /* text-align: justify;
     text-justify: inter-word; */
     padding-right: 2vw;
+    float: left;
 }
 
 .sectionText {
     padding: 5px;
     /* Dynamic font size with minimum size:
     font-size: calc(5px + 1.3vw); */
-    font-size: 1.3vw;
+    font-size: 1.5vw;
 }
 
 footer{
@@ -144,11 +145,28 @@ footer>span {
     display: inline-block;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 800px){
     main {
         width: 100%; /* puts the asides below main */
     }
     aside {
         float: left; /* puts the asides inline from left to right */
+        margin-left: 1vw;
+        width: 30%;
     }
 }
+
+
+
+    /* (D) SHOW/HIDE */
+     .hovermsg {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 1vw;
+    }
+    .hoverwrap:hover .hovermsg {
+        visibility: visible;
+        opacity: 1;
+    }
+
