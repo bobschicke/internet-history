@@ -87,6 +87,10 @@ aside img {
     width: 80%;
 }
 
+iframe {
+    width: 20vw;
+    height: 11vw;
+}
 
 main{
     width: 75%;
@@ -117,7 +121,7 @@ section {
     padding: .6vw;
     /* text-align: justify;
     text-justify: inter-word; */
-    padding-right: 2vw;
+    padding-right: 1vw;
     float: left;
 }
 
