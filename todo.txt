@@ -1,0 +1,5 @@
+Index.html:
+hero picture and
+aside pictures and copyrights.
+Check aside links headings and text.
+Add required features to footer

@@ -8,6 +8,8 @@
     <!-- COMMENT IN HTML -->
     <!-- <link rel="stylesheet" href="css/style.css"> -->
 
+    <script src="jscript/jscript.js"></script>
+
     <style>
 
         body {
@@ -124,20 +126,20 @@
         aside h3 {
             font-size: calc(8px + .8vw);
         }
+        aside p {
+            font-size: 1vw;
+        }
 
         aside a {
             font-size: 1vw;
         }
-        aside:first-child {
-            margin-left: 1vw;
-        }
         #aside1 {
-            margin-left: 1vw;
+            margin-left: .5vw;
         }
 
         footer{
             Clear: both;
-            height: 2vw;
+            height: 3vw;
             background-color: lightgray;
             font-size: 1.3vw;
             margin-top: 2vw;
@@ -145,11 +147,16 @@
 
         footer>span {
             font-style: italic;
-            width: 33%;
+            width: 32%;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
             display: inline-block;
+        }
+
+        button {
+            margin-top: 0.5vw;
+            font-size: 1.3vw;
         }
 
         h2 {
@@ -170,7 +177,17 @@
 
         }
 
-
+        /* (D) SHOW/HIDE */
+        .hovermsg {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 1vw;
+        }
+        .hoverwrap:hover .hovermsg {
+            visibility: visible;
+            opacity: 1;
+        }
 
     </style>
 
@@ -186,7 +203,6 @@
         <li><a href="early_internet.html">Early Internet</a></li>
         <li><a href="browser_search.html">Browser & Search</a></li>
         <li><a href="peoplenet.html">People-Net</a></li>
-
     </menu>
     <div id ="heading">
         <h2>Explore The Interesting and Exciting History Of The Internet</h2>
@@ -199,44 +215,54 @@
         </main>
         <aside id="aside1">
             <h3>Pre Internet</h3>
-            <img src="images/mainframe.JPG" alt="This is a splash"/>
-            <div>
-                <a href="pre-internet.html">What was the motivation for the internet?</a>
+            <div class="hoverwrap">
+                <img src="images/mainframe.JPG" alt="This is a picture of a mainframe computer"/>
+                <div>
+                    <p> <a href="pre-internet.html">What was the motivation for the internet?</a></p>
+                </div>
+                <div class="hovermsg"><a href="https://www.flickr.com/photos/9479603@N02/49755349401">"Mainframe Computer 1960"</a> by <a href="https://www.flickr.com/photos/9479603@N02"> PanelSwitchman</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=ccsearch&atype=rich">CC BY-NC-ND 2.0</a> </div>
             </div>
+
         </aside>
         <aside>
             <h3>Arpa-net</h3>
-            <img src="images/arpanet1972.JPG" alt="This is a arpanet"/>
-            <div>
-                <a href="arpa-net.html">The exciting beginning of the Internet!</a>
+            <div class="hoverwrap">
+                <img src="images/arpanet1973_cc.JPG" alt="This is a picture of ARPA NET"/>
+                <div>
+                    <p><a href="arpa-net.html">The exciting beginning of the Internet!</a></p>
+                </div>
+                <div class="hovermsg"><a href="https://www.flickr.com/photos/24431382@N03/7257339850">"Arpanet Geographical Map in 1973 (1988)"</a> by <a href="https://www.flickr.com/photos/24431382@N03">Eric Fisher</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=ccsearch&atype=rich">CC BY-NC-ND 2.0</a> </div>
             </div>
-        </aside>
+       </aside>
         <aside>
             <h3>Early Internet</h3>
-            <img src="images/dialupModem.JPG" alt="This is a early internet"/>
-            <div>
-                <a href="early_internet.html">Wow! Dial-up Modems!</a>
+            <div class="hoverwrap">
+                <img src="images/tcpip1_cc.JPG" alt="This is a picture of TCP/IP"/>
+                <div>
+                    <p><a href="early_internet.html">Much need protocols</a></p>
+                </div>
+                <div class="hovermsg"><a href="https://www.flickr.com/photos/93453114@N00/5598305463">"TCP/IP Stack"</a> by <a href="https://www.flickr.com/photos/93453114@N00">purpleslog</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=ccsearch&atype=rich">CC BY-NC-ND 2.0</a> </div>
             </div>
         </aside>
         <aside>
             <h3>Browsers and Search</h3>
             <img src="images/mosaicBrowser.JPG" alt="This is a browser"/>
             <div>
-                <a href="pre-internet.html">What good's the internet without browsers and search engines!</a>
+                <p><a href="pre-internet.html">What good's the internet without browsers and search engines!</a></p>
             </div>
         </aside>
         <aside>
             <h3>Social Media</h3>
             <img src="images/myspace.JPG" alt="This is a social media"/>
             <div>
-                <a href="pre-internet.html">No need to leave your house to be sociable!</a>
+                <p><a href="peoplenet.html">No need to leave your house to be sociable!</a></p>
             </div>
         </aside>
         <aside>
             <h3>E-Commerce</h3>
             <img src="images/earlyamazon.JPG" alt="This is a amazon"/>
             <div>
-                <a href="pre-internet.html">Well now no need to leave the house at all...except for work (not anymore)!</a>
+                <p><a href="peoplenet.html">Well now no need to leave the house at all...except for work (not anymore)!</a></p>
             </div>
         </aside>
         <footer>
@@ -244,12 +270,11 @@
                 <a href="https://www.linkedin.com/in/robert-schicke-b42a3670/">Bob Schicke&#169;</a>
             </span>
             <span>
-                <a href="https://en.wikipedia.org/wiki/History_of_the_Internet">Wiki Link</a>
+                <a href="https://github.com/bobschicke/internet-history.git">Github Repostory</a>
             </span>
             <span>
-                <a href="https://github.com/bobschicke/CSS_Test">Article Download link</a>
+                <button onclick="w3cValidation()">W3C Validation</button>
             </span>
-
         </footer>
     </div>
 </body>
