@@ -16,7 +16,7 @@
             margin-top: 0;
         }
         header {
-            width: 50%;
+            width: 40%;
             float: left;
             text-align: center;
             font-size: 1.5vw;
@@ -30,9 +30,9 @@
         menu {
             /* float: left; */
             margin-top: 0;
-            width: 50%;
+            width: 60%;
             font-size: 1.3vw;
-            margin-left: 50%;
+            margin-left: 40%;
             /* fixed locks the position relative to the window, so scrolling has no effect.
             For some reason this moves the horizontal position all the way to the left??? */
             position: fixed;
@@ -90,11 +90,11 @@
             margin-top: 1vw;
             padding: .2vw;
         }
-
         main img {
             width: 80%;
             margin-right: auto;
             margin-left: 10%;
+            border: 10px solid gray;
         }
         main h2 {
             margin-left: 10%;
@@ -102,24 +102,17 @@
         }
 
         aside{
-            width:15.5%;
+            width:19%;
             box-sizing: border-box;
-
             display: inline-block;
-            /* height: 300px; */
             margin-top: .2vw;
-            margin-left: .2vw;
-            /* margin-right: 1vw;
-
-            margin-left: calc(-2px + .1vw);*/
+            margin-left: .15vw;
             margin-right: auto;
             vertical-align: top;
-
         }
 
         aside img {
             margin: 0;
-
             width: 100%;
         }
 
@@ -166,17 +159,6 @@
             margin: 0;
         }
 
-        section {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 5px;
-            float: left; /* if widths are made smaller (eg 33%) then they will float into columns */
-        }
-        #section1 img {
-            border: 10px solid gray;
-
-        }
-
         /* (D) SHOW/HIDE */
         .hovermsg {
             visibility: hidden;
@@ -188,9 +170,7 @@
             visibility: visible;
             opacity: 1;
         }
-
     </style>
-
 </head>
 <body>
     <header>
@@ -209,9 +189,7 @@
     </div>
     <div id="wrapper">
         <main>
-            <section id="section1">
-                <img src="images/collage.JPG" alt="This is a sample picture"/>
-            </section>
+            <img src="images/collage.JPG" alt="This is a collage of internet history"/>
         </main>
         <aside id="aside1">
             <h3>Pre Internet</h3>
@@ -222,7 +200,6 @@
                 </div>
                 <div class="hovermsg"><a href="https://www.flickr.com/photos/9479603@N02/49755349401">"Mainframe Computer 1960"</a> by <a href="https://www.flickr.com/photos/9479603@N02"> PanelSwitchman</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=ccsearch&atype=rich">CC BY-NC-ND 2.0</a> </div>
             </div>
-
         </aside>
         <aside>
             <h3>Arpa-net</h3>
@@ -237,32 +214,31 @@
         <aside>
             <h3>Early Internet</h3>
             <div class="hoverwrap">
-                <img src="images/tcpip1_cc.JPG" alt="This is a picture of TCP/IP"/>
+                <img src="images/vint_cerf_cc.JPG" alt="This is a picture of Vint Cerf"/>
                 <div>
-                    <p><a href="early_internet.html">Much need protocols</a></p>
+                    <p><a href="early_internet.html">Learn what the Internet was built on, and the pioneers who built it.</a></p>
                 </div>
-                <div class="hovermsg"><a href="https://www.flickr.com/photos/93453114@N00/5598305463">"TCP/IP Stack"</a> by <a href="https://www.flickr.com/photos/93453114@N00">purpleslog</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=ccsearch&atype=rich">CC BY-NC-ND 2.0</a> </div>
+                <div class="hovermsg"><a href="https://www.flickr.com/photos/87232391@N00/398653550">"Vint Cerf"</a> by <a href="https://www.flickr.com/photos/87232391@N00">Charles Haynes</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=ccsearch&atype=rich">CC BY-NC-ND 2.0</a> </div>
             </div>
         </aside>
         <aside>
             <h3>Browsers and Search</h3>
-            <img src="images/mosaicBrowser.JPG" alt="This is a browser"/>
-            <div>
-                <p><a href="pre-internet.html">What good's the internet without browsers and search engines!</a></p>
+            <div class="hoverwrap">
+                <img src="images/browsers_cc.JPG" alt="This is a picture of Browsers"/>
+                <div>
+                    <p><a href="pre-internet.html">What good's the internet without browsers and search engines!</a></p>
+                </div>
+                <div class="hovermsg"><a href="https://www.flickr.com/photos/11319126@N00/8270409318">"browsers"</a> by <a href="https://www.flickr.com/photos/11319126@N00">kjhosein</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=ccsearch&atype=rich">CC BY-NC-ND 2.0</a> </div>
             </div>
-        </aside>
+       </aside>
         <aside>
-            <h3>Social Media</h3>
-            <img src="images/myspace.JPG" alt="This is a social media"/>
-            <div>
-                <p><a href="peoplenet.html">No need to leave your house to be sociable!</a></p>
-            </div>
-        </aside>
-        <aside>
-            <h3>E-Commerce</h3>
-            <img src="images/earlyamazon.JPG" alt="This is a amazon"/>
-            <div>
-                <p><a href="peoplenet.html">Well now no need to leave the house at all...except for work (not anymore)!</a></p>
+            <h3>People-Net?</h3>
+            <div class="hoverwrap">
+                <img src="images/facebook_cc.JPG" alt="This is a picture of facebook"/>
+                <div>
+                    <p><a href="peoplenet.html">Allowing people to dictate the content of the internet brought a sense of ownership. And no need to leave your house to be sociable!</a></p>
+                </div>
+                <div class="hovermsg"><a href="https://www.flickr.com/photos/50623029@N07/5169004822">"Facebook Screenshot"</a> by <a href="https://www.flickr.com/photos/50623029@N07">codemastersnake</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=ccsearch&atype=rich">CC BY-NC-ND 2.0</a> </div>
             </div>
         </aside>
         <footer>
