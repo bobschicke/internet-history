@@ -5,7 +5,7 @@
     <title>Implementing Pylint</title>
     <meta name="description" content="Pre-Internet">
     <!-- COMMENT IN HTML -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_article.css">
     <script src="jscript/jscript.js"></script>
 </head>
 <body>
@@ -27,7 +27,7 @@
             <section id="section1">
                 <h2>What is Unit Testing?</h2>
                 <div class="hoverwrap">
-                    <img src="images/sputnik_cc.JPG" alt="This is a picture of Sputnik satellite"/>
+                    <img src="images/sample.png" alt="This is a picture of Sputnik satellite"/>
                     <div class="hovermsg"><a href="https://www.flickr.com/photos/26244825@N05/8052668653">"Sputnik-1"</a> by <a href="https://www.flickr.com/photos/26244825@N05"> paukrus</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=ccsearch&atype=rich">CC BY-NC-ND 2.0</a> </div>
                 </div>
                 <div class="sectionText">
@@ -38,18 +38,15 @@
             </section>
             <section id="section2">
                 <h2>What is AAA Pattern?</h2>
-                <div class="hoverwrap">
-                    <img src="images/mainframe.JPG" alt="This is a picture of a mainframe computer"/>
-                    <div class="hovermsg"><a href="https://www.flickr.com/photos/9479603@N02/49755349401">"Mainframe Computer 1960"</a> by <a href="https://www.flickr.com/photos/9479603@N02"> PanelSwitchman</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=ccsearch&atype=rich">CC BY-NC-ND 2.0</a> </div>
-                </div>
                 <div class="sectionText">
                     AAA stands for Arrange, Act and Assert.
                     Arrange means to setup the test by creating objects, assigning data to variables, signing into websites or databases, etc.
                     Act means to execute the test which can involve calling methods, passing data or interacting with a website.
                     Assert means to check that the method under test performed the operations correctly.
-
+                    <p>
                     Let's see a simple example:
-                    <code><pre>
+                    </p>
+                    <pre><code>
                         # This is a function that adds 2 numbers
                         def add(val1, val2):
                             return val1+ val2
@@ -63,9 +60,9 @@
                             result = add(value1, value2)
                             #Assert
                             assert result == 11
-                    </pre></code>
-                    In the above example the Arrange section instantiates variables and assigns values to them. The Act calls the function that we are testing and passes the variables to it and then assigns the return value to result.
-                    The Assert section checks that the value that was returned, the database values, website status, are what was expected. If they are do not match the expected results then the test will fail.
+                    </code></pre>
+                    In the above example the "Arrange" section instantiates variables and assigns values to them. The "Act" section calls the function that we are testing and passes the variables to it and then assigns the return value to result.
+                    The "Assert" section checks that the value that was returned e.g. the database values, website status, are what was expected. If they are do not match the expected results then the test will fail.
 
                     It's important to test often, so you don't get too far down the wrong path. If you code a small section and test it, it will be much easier to debug than if you code for a week and then test it. You should test at least as often as you commit, and it's good to commit a couple times a day. If you follow these practices you will never get too far astray.
 
@@ -76,7 +73,7 @@
             <section id="section3">
                 <h2>How to Configure Against Nuisance Warnings</h2>
                 <div class="hoverwrap">
-                    <img src="images/network_cc.JPG" alt="This is a picture of a computer network"/>
+                    <img src="images/sample.png" alt="This is a picture of a computer network"/>
                     <div class="hovermsg"><a href="https://www.flickr.com/photos/22555876@N00/142056834">"Network"</a> by <a href="https://www.flickr.com/photos/22555876@N00">Qaanaaq</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=ccsearch&atype=rich">CC BY-NC-ND 2.0</a> </div>
                 </div>
                 <div class="sectionText">

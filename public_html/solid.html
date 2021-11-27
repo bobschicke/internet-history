@@ -5,7 +5,7 @@
     <title>Calculator OOP</title>
     <meta name="description" content="Calculator OOP Implementation">
     <!-- COMMENT IN HTML -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_article.css">
     <script src="jscript/jscript.js"></script>
 </head>
 <body>
@@ -25,49 +25,52 @@
     <div id="wrapper">
         <main>
             <section id="section1">
-                <h2>Why SOLID</h2>
+                <h2>Why SOLID?</h2>
                 <div class="hoverwrap">
-                    <img src="images/encapsulation.png" alt="This is a picture of encapsulation"/>
+                    <img src="images/solid.PNG" alt="This is a picture of encapsulation"/>
                     <div class="hovermsg">Picture by Bob Schicke</div>
                 </div>
                 <div class="sectionText">
-                    The SOLID Principal is a way of designing code so that it is expandable, reusable and maintainable.  xxxx.
-                    When the SOLID principal is followed, code is easily managed, maintained and expanded. The way this is achieved is to minimize the reliance of one class to another and minimize a methods reliance on other methods or data.
-
+                    The SOLID Principal is a way of designing code so that it is expandable, reusable and maintainable. Too often programmers take the easy way up front by cramming a bunch of functionality in one class and/or one method, and creating an interdependency between classes. This makes it impossible to reuse the code because it does too many things, and will only work for this one project.
+                    <p>
+                    When the SOLID principal is followed, code is easily managed, maintained and expanded. The way this is achieved is to minimize the reliance of one class to another and minimize a method's reliance on other methods or data.
+                    </p>
                 </div>
             </section>
             <section id="section2">
                 <h2>Single Responsibility Principal:</h2>
-                <div class="hoverwrap">
-                    <img src="images/inheritance.png" alt="This is a picture of a inheritance"/>
-                    <div class="hovermsg">Picture by Bob Schicke</div>
-                </div>
                 <div class="sectionText">
-                    The “S” stands for “Single Responsibility”. This means that a class should contain the methods and data that are required to implement one feature. And a method should contain code to handle a singe aspect of that feature. This way, adding a feature means to add a new function or class, and not adding to a current one which will make the program more complicated and harder to modify or extend. In short it means “DO ONE THING!” In our calculator project, our add method just adds the values. It doesn't print them out, doesn't save them to memory.
+                    The “S” stands for “Single Responsibility”, however it may also be thought of as "Simple". This means that a class should only contain methods and data that are required to implement one feature. Each method should only contain code to handle a singe aspect of that feature. This way, adding a feature means to add a new class, and adding functionality to that feature means to add a new method. SOLID explicitly forbids adding to a current function or class, which will make the program more complicated and harder to modify or extend.
+                    <p>
+                    In short SOLID means “DO ONE THING!” In our calculator project, our add method just adds the values. It doesn't print them out, doesn't save them to memory.
+                    </p>
                 </div>
-                <div>
-                    <img src="images/add_method.png" alt="This is a picture of an add method"/>
+                <div class="hoverwrap">
+                    <img src="images/add_method.png" alt="This is a picture of a add"/>
+                    <div class="hovermsg">Picture by Bob Schicke</div>
                 </div>
             </section>
             <section id="section3">
                 <h2>Open/Closed Principal:</h2>
-                <div class="hoverwrap">
-                    <img src="images/polymorphism.png" alt="This is a picture of Polymorphism:"/>
-                    <div class="hovermsg">Picture by Bob Schicke</div>
-                </div>
                 <div class="sectionText">
                     The “O” stands for the “Open/Closed” principal. This means that a class or method should be Open to extension and closed to modifications. The way to do this is to make parent class, which holds the common data and methods, or could even be an abstract class which has no data or methods. And then the child classes could implement the methods in a custom way to fulfill the feature requirements.
+                    <p>
                     An example of this could be a PayProcessing parent class that has child classes that handle different ways to pay, such as credit, debit, paypal. If a new payment type, such as bitcoin, a separate bitcoin class can be added without affecting the other payment types.
+                    </p>
+                </div>
+                <div class="hoverwrap">
+                    <img src="images/open_closed.PNG" alt="This is a picture of open/closed"/>
+                    <div class="hovermsg">Picture by Bob Schicke</div>
                 </div>
             </section>
             <section id="section4">
                 <h2>Liskov's Substitution Principal:</h2>
-                <div class="hoverwrap">
-                    <img src="images/abstraction.PNG" alt="This is a picture of abstraction"/>
-                    <div class="hovermsg">Picture by Bob Schicke</div>
-                </div>
                 <div class="sectionText">
                     The “L” stands for “Liskov's Substitution” principal. This means that a parent class should be able to be substituted with the child class. This means that anything that the parameters passed to the parent class should be compatible with all of the child classes. In our example of the payment system, if one of the payment type child classes requires an account number and another requires an email, that makes the input prompt requirements incompatible. In this case, the input prompt should be handled by the child classes and not the base class.
+                </div>
+                <div class="hoverwrap">
+                    <img src="images/liskovs_substitution.PNG" alt="This is a picture of liskovs_substitution"/>
+                    <div class="hovermsg">Picture by Bob Schicke</div>
                 </div>
             </section>
             <section id="section5">

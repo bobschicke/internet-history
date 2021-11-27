@@ -5,7 +5,7 @@
     <title>Calculator OOP</title>
     <meta name="description" content="Calculator OOP Implementation">
     <!-- COMMENT IN HTML -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_article.css">
     <script src="jscript/jscript.js"></script>
 </head>
 <body>
@@ -26,49 +26,53 @@
         <main>
             <section id="section1">
                 <h2>Encapsulation:</h2>
+
                 <div class="hoverwrap">
                     <img src="images/encapsulation.png" alt="This is a picture of encapsulation"/>
                     <div class="hovermsg">Picture by Bob Schicke</div>
                 </div>
+
                 <div class="sectionText">
                     Encapsulation using a class encloses, or wraps variables and methods in s group whose members have protected access. In a class, external access is only allowed to methods or variables that are designated as public. Generally the data is private (non-excessible) except by using special public functions frequently called setters and getters. The same is true for functions that deal with critical information such as websites and databases. You want to make the critical methods private and use public functions to form a safe barrier.
+                    <p>
                     In our Calculator project we use encapsulation in all of our classes. For example, our Calculator class  encapsulates the add, subtract, multiply and divide methods.
-
+                    </p>
                 </div>
             </section>
             <section id="section2">
                 <h2>Inheritance:</h2>
+                <!--
                 <div class="hoverwrap">
                     <img src="images/inheritance.png" alt="This is a picture of a inheritance"/>
                     <div class="hovermsg">Picture by Bob Schicke</div>
                 </div>
+                -->
                 <div class="sectionText">
-                    Inheritance allows you to have a general parent class that is inherited by the child classes. This can make sense if the child classes can use most of the methods and variables from the parent.
-                    For instance, a parent class can be “Animals” and have variables that would apply to all animals such as weight, color, height, length, life expectancy, habitat. And some children of animals would be Mammals, Reptiles, Fish, Birds, and these child classes would add data and methods that was specific to their class, such as fin size, wing span, hair length.
-
-                    In our Calculator project we have a parent class Calculation that has a tuple “values” and a method to convert “values” to a list of floats. We then have Addition, Subtraction, Multiply and Divide classes that inherit Calculation so that they can use Calculation's members. After inheriting the from Calculation, the children only need to implement a “get_result” function, which needs to be different for each of the operations performed by the children.
+                    With Inheritance, you to have a general parent class that is inherited by the child classes. When a child class inherits a parent class it must implement all the parents methods. This can make sense if the child classes can use most of the methods and variables from the parent.
+                    For instance, a parent class “Animals” can have variables that would apply to all animals such as weight, color, height, length, life expectancy, habitat. Some examples of children of animals would be Mammals, Reptiles, Fish, Birds. These child classes would add data and methods that were specific to their class, such as fin size, wing span, hair length.
+                    <p>
+                        In our Calculator project we have a parent class Calculation that has a tuple “values” and a method to convert “values” to a list of floats. We then have Addition, Subtraction, Multiply and Divide classes that inherit Calculation so that they can use Calculation's members. After inheriting the from Calculation, the children only need to implement a “get_result” function, which needs to be different for each of the operations performed by the children.
+                    </p>
+                    <img src="images/inheritance.png" alt="This is a picture of a inheritance"/>
 
                 </div>
             </section>
             <section id="section3">
                 <h2>Polymorphism:</h2>
-                <div class="hoverwrap">
-                    <img src="images/polymorphism.png" alt="This is a picture of Polymorphism:"/>
-                    <div class="hovermsg">Picture by Bob Schicke</div>
-                </div>
                 <div class="sectionText">
-                    Polymorphism means that you have the same function name, but have custom implementations based on the type of object or type of data. One example of this in python is the “print” method. For example, the print method has custom implementations for integers, strings, lists. You don't need to be concerned with letting the function know what type of data is being printed. The correct implementation is called based on the data that is passed.
+                    Polymorphism means that you have the same function name, but have custom implementations based on the type of object or type of data. One example of this is python's “print” method. For example, the print method has custom implementations for integers, strings, lists. You don't need to be concerned with letting the function know what type of data is being printed. The correct implementation is called based on the data that is passed.
                     You can create your own polymorphism by having a property or method in a parent function and then creating a custom implementation in some of the child classes.
+                    <p>
                     We use polymorphism in the Calculator project when the Addition, Subtraction, Multiplication and Division classes implement custom “get_result” methods. When get_result(values) is called on any of the classes it returns the value of the operation.
-
+                    </p>
+                    <div class="hoverwrap">
+                        <img src="images/polymorphism.png" alt="This is a picture of Polymorphism:"/>
+                        <div class="hovermsg">Picture by Bob Schicke</div>
+                    </div>
                 </div>
             </section>
             <section id="section4">
                 <h2>Abstraction:</h2>
-                <div class="hoverwrap">
-                    <img src="images/abstraction.PNG" alt="This is a picture of abstraction"/>
-                    <div class="hovermsg">Picture by Bob Schicke</div>
-                </div>
                 <div class="sectionText">
                     Abstraction is the process using a simple interface, such as function calls, to hide the complexity of the underlying code. When you type in a function call, such as the print(“Hello World”) function in python,   there may be 100+ lines of code to correctly implement the function. A similar thing is when you type a phone number into your phone, enter a search string in google or turn the key in your car. You do a very simple thing, and a very complex process occurs.
                     In our Calculator project, there are many abstractions that take place.
@@ -76,6 +80,10 @@
                     <p>
                     And in another layer of abstraction, there is library code that implements the program code above. As programmers we don't necessarily care how a “for” loop is coded in the library. We just need to know how to use it in the program code we write. In the early days of programming, you had to program in machine code. Now we can write 10 lines of code in a few minutes that does more than a program that used to take a week to write on 1000 punch cards, all thanks to abstraction.
                     </p>
+                </div>
+                <div class="hoverwrap">
+                    <img src="images/abstraction.PNG" alt="This is a picture of abstraction"/>
+                    <div class="hovermsg">Picture by Bob Schicke</div>
                 </div>
             </section>
         </main>
