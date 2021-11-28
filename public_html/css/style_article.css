@@ -101,10 +101,15 @@ main{
 main img {
     box-sizing: border-box;
     /*width: 30%;*/
-    height: 20vw;
+    height: 16vw;
     float: left;
     padding: 5px;
 }
+
+.short_pic img {
+    height: 6vw;
+}
+
 
 section h2 {
     margin-bottom: 0;
@@ -125,24 +130,33 @@ section {
     float: left;
 }
 
+
 .sectionText {
     padding: 5px;
     /* Dynamic font size with minimum size:
     font-size: calc(5px + 1.3vw); */
     font-size: 1.5vw;
 }
+.sectionLeftText {
+    float: left;
+    padding: 5px;
+    /* Dynamic font size with minimum size:
+    font-size: calc(5px + 1.3vw); */
+    font-size: 1.5vw;
+
+}
 
 footer{
     Clear: both;
-    height: 2vw;
+    height: 3vw;
     background-color: lightgray;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
 }
 
 footer>span {
 
     font-style: italic;
-    width: 33%;
+    width: 24%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -167,15 +181,15 @@ body {
 
 
 
-    /* (D) SHOW/HIDE */
-     .hovermsg {
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s;
-        font-size: 1vw;
-    }
-    .hoverwrap:hover .hovermsg {
-        visibility: visible;
-        opacity: 1;
-    }
+/* (D) SHOW/HIDE */
+ .hovermsg {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1vw;
+}
+.hoverwrap:hover .hovermsg {
+    visibility: visible;
+    opacity: 1;
+}
 
