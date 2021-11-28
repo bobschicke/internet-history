@@ -42,20 +42,28 @@
                 <div class="sectionText">
                     The “S” stands for “Single Responsibility”, however it may also be thought of as "Simple". This means that a class should only contain methods and data that are required to implement one feature. Each method should only contain code to handle a singe aspect of that feature. This way, adding a feature means to add a new class, and adding functionality to that feature means to add a new method. SOLID explicitly forbids adding to a current function or class, which will make the program more complicated and harder to modify or extend.
                     <p>
-                    In short SOLID means “DO ONE THING!” In our calculator project, our add method just adds the values. It doesn't print them out, doesn't save them to memory.
+                        In short SOLID means “DO ONE THING!” In our calculator project, our add method just adds the values. It doesn't print them out, doesn't save them to memory.
                     </p>
                 </div>
                 <div class="hoverwrap">
                     <img src="images/add_method.png" alt="This is a picture of a add"/>
                     <div class="hovermsg">Picture by Bob Schicke</div>
                 </div>
+                <div class="sectionText">
+                    <p>
+                        This is a link to the <a href="https://github.com/bobschicke/calc2/blob/calc_refactor/calculator/calculator.py">Calculator Class</a>. There you can see how the "add" method does only one thing.
+                    </p>
+                </div>
             </section>
             <section id="section3">
                 <h2>Open/Closed Principal:</h2>
                 <div class="sectionText">
-                    The “O” stands for the “Open/Closed” principal. This means that a class or method should be Open to extension and closed to modifications. The way to do this is to make parent class, which holds the common data and methods, or could even be an abstract class which has no data or methods. And then the child classes could implement the methods in a custom way to fulfill the feature requirements.
+                    The “O” stands for the “Open/Closed” principal. This means that a class or method should be Open to extension and closed to modifications.
+                    The way to do this is to make parent class, which holds the common data and methods, or could even be an abstract class which has no data or methods.
+                    And then the child classes could implement the methods in a custom way or even add methods to fulfill the feature requirements.
+                    But at no time should the base class be modified to add new features.
                     <p>
-                    An example of this could be a PayProcessing parent class that has child classes that handle different ways to pay, such as credit, debit, paypal. If a new payment type, such as bitcoin, a separate bitcoin class can be added without affecting the other payment types.
+                    An example of this could be a PayProcessing parent class that has child classes that handle different ways to pay, such as credit, debit, paypal. If you wanted to add a new payment type, such as bitcoin, a separate bitcoin class can be added without modifying the PayProcessing class or affecting the other payment types.
                     </p>
                 </div>
                 <div class="hoverwrap">
@@ -66,11 +74,15 @@
             <section id="section4">
                 <h2>Liskov's Substitution Principal:</h2>
                 <div class="sectionText">
-                    The “L” stands for “Liskov's Substitution” principal. This means that a parent class should be able to be substituted with the child class. This means that anything that the parameters passed to the parent class should be compatible with all of the child classes. In our example of the payment system, if one of the payment type child classes requires an account number and another requires an email, that makes the input prompt requirements incompatible. In this case, the input prompt should be handled by the child classes and not the base class.
+                    The “L” stands for “Liskov's Substitution” principal. In this case, "substitution" means that a parent class should be able to be substituted with the child class. In order to do this, the parameters that the parent class requires should be compatible with the parameters required by all the child classes. In our Calculator project the parent class, Calculation, requires a list of tuples. If one of the Calculation child classes, for example the Addition class requires hex numbers as input and the Subtraction class requires floats, that makes the input requirements incompatible with the base class.
                 </div>
                 <div class="hoverwrap">
                     <img src="images/liskovs_substitution.PNG" alt="This is a picture of liskovs_substitution"/>
                     <div class="hovermsg">Picture by Bob Schicke</div>
+                </div>
+                <div class="sectionText">
+                    This is a link to the <a href="https://github.com/bobschicke/calc2/blob/calc_refactor/calc/calculation.py">Calculation Class</a>. The Calculation class is the parent class of all the calculations.
+                    <br>This is a link to the <a href="https://github.com/bobschicke/calc2/blob/calc_refactor/calculator/calculator.py">Calculator Class</a>. The Calculator class has examples of how the children of the Calculation class are instantiated.
                 </div>
             </section>
             <section id="section5">
@@ -105,10 +117,10 @@
             <a href="https://www.linkedin.com/in/robert-schicke-b42a3670/">Bob Schicke&#169;</a>
         </span>
         <span>
-            <a href="https://github.com/bobschicke/internet-history/tree/project2">Code Repository</a>
+            <a href="https://github.com/bobschicke/internet-history/tree/project2">Website Repository</a>
         </span>
         <span>
-            <a href="https://github.com/bobschicke/python_articles">Article Repository</a>
+            <a href="https://github.com/bobschicke/calc2/tree/calc_refactor">Calculator Repository</a>
         </span>
         <span>
             <button onclick="w3cValidation()">W3C Validation</button>
